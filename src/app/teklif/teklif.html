@@ -1,0 +1,153 @@
+<div class="teklif-page">
+  <div class="teklif-header">
+    <div class="container">
+      <a routerLink="/" class="back-link">← Ana Sayfaya Dön</a>
+      <h1>Teklif Al</h1>
+      <p class="subtitle">Emlak ihtiyaçlarınız için hemen bilgi alın</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-wrapper">
+      
+      @if (successMessage) {
+        <div class="success-message">
+          <span class="success-icon">✓</span>
+          <h3>Talebiniz Başarıyla Alındı!</h3>
+          <p>En kısa sürede size dönüş yapacağız. Teşekkür ederiz.</p>
+        </div>
+      }
+
+      <form [formGroup]="teklifForm" (ngSubmit)="onSubmit()" class="teklif-form">
+        
+        <!-- Ad Soyad -->
+        <div class="form-group">
+          <label for="adSoyad">Ad Soyad <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="adSoyad" 
+            formControlName="adSoyad"
+            class="form-control"
+            [class.is-invalid]="submitted && f['adSoyad'].errors"
+            placeholder="Adınız ve soyadınız">
+          @if (submitted && f['adSoyad'].errors) {
+            <div class="error-message">
+              @if (f['adSoyad'].errors['required']) {
+                <span>Ad soyad zorunludur</span>
+              }
+              @if (f['adSoyad'].errors['minlength']) {
+                <span>En az 3 karakter olmalıdır</span>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Telefon -->
+        <div class="form-group">
+          <label for="telefon">Telefon Numarası <span class="required">*</span></label>
+          <input 
+            type="tel" 
+            id="telefon" 
+            formControlName="telefon"
+            class="form-control"
+            [class.is-invalid]="submitted && f['telefon'].errors"
+            placeholder="5xx xxx xx xx">
+          @if (submitted && f['telefon'].errors) {
+            <div class="error-message">
+              @if (f['telefon'].errors['required']) {
+                <span>Telefon numarası zorunludur</span>
+              }
+              @if (f['telefon'].errors['pattern']) {
+                <span>Geçerli bir telefon numarası giriniz</span>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">E-posta Adresi <span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email"
+            class="form-control"
+            [class.is-invalid]="submitted && f['email'].errors"
+            placeholder="ornek@email.com">
+          @if (submitted && f['email'].errors) {
+            <div class="error-message">
+              @if (f['email'].errors['required']) {
+                <span>E-posta adresi zorunludur</span>
+              }
+              @if (f['email'].errors['email']) {
+                <span>Geçerli bir e-posta adresi giriniz</span>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Emlak Tipi -->
+        <div class="form-group">
+          <label for="emlakTipi">Emlak Tipi <span class="required">*</span></label>
+          <select 
+            id="emlakTipi" 
+            formControlName="emlakTipi"
+            class="form-control"
+            [class.is-invalid]="submitted && f['emlakTipi'].errors">
+            <option value="">Seçiniz...</option>
+            @for (tip of sigortaTipleri; track tip.value) {
+              <option [value]="tip.value">{{ tip.label }}</option>
+            }
+          </select>
+          @if (submitted && f['emlakTipi'].errors) {
+            <div class="error-message">
+              <span>Emlak tipi seçimi zorunludur</span>
+            </div>
+          }
+        </div>
+
+        <!-- Mesaj -->
+        <div class="form-group">
+          <label for="mesaj">Mesajınız <span class="required">*</span></label>
+          <textarea 
+            id="mesaj" 
+            formControlName="mesaj"
+            class="form-control"
+            [class.is-invalid]="submitted && f['mesaj'].errors"
+            rows="5"
+            placeholder="Emlak ihtiyacınız hakkında detaylı bilgi verebilirsiniz..."></textarea>
+          @if (submitted && f['mesaj'].errors) {
+            <div class="error-message">
+              @if (f['mesaj'].errors['required']) {
+                <span>Mesaj zorunludur</span>
+              }
+              @if (f['mesaj'].errors['minlength']) {
+                <span>En az 10 karakter olmalıdır</span>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">
+            Teklif Talep Et
+          </button>
+          <a routerLink="/" class="btn-cancel">İptal</a>
+        </div>
+
+      </form>
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <h3>📞 Hızlı İletişim</h3>
+        <p>Acil durumlar için bizi arayabilirsiniz:</p>
+        <div class="phone-numbers">
+          <a href="tel:+905337230153">+90 533 723 01 53</a>
+        </div>
+        <p class="info-text">Çalışma Saatleri: Hafta içi 09:00 - 18:00</p>
+      </div>
+
+    </div>
+  </div>
+</div>

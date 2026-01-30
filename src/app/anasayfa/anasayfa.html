@@ -1,0 +1,166 @@
+<!-- Main Title Section -->
+<section class="main-title">
+  <div class="container">
+    <div class="title-logo"></div>
+    <h1 class="company-title">ZVLINE REAL ESTATE</h1>
+    <p class="company-subtitle">Ev, Arazi Satış ve Kiralama</p>
+  </div>
+</section>
+
+<!-- Hero Section with Swiper -->
+<section class="hero" id="anasayfa">
+  <swiper-container #heroSwiper class="hero-swiper" navigation="true" loop="true" autoplay="true" observer="true"
+    observe-parents="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" speed="1000">
+
+    @for (slide of slides; track slide.title) {
+    <swiper-slide class="hero-slide">
+      <div class="image-container">
+        <img [src]="slide.image" [alt]="slide.title" class="hero-image">
+        <div class="image-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>{{ slide.title }}</h1>
+          <p class="hero-subtitle">{{ slide.subtitle }}</p>
+          <div class="hero-contact">
+            <a href="tel:+905337230153" class="phone-link">+90 533 723 01 53</a>
+            <button type="button" class="btn-primary" (click)="goToTeklif()">Teklif Al</button>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+    }
+
+  </swiper-container>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="hizmetler">
+  <div class="container">
+    <h2 class="section-title">Emlak Hizmetlerimiz</h2>
+    <div class="services-grid">
+
+      <!-- Satılık Konut -->
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Satılık Konut</h3>
+        <p>Hayalinizdeki eve kavuşmak için geniş satılık konut portföyümüzü inceleyin.</p>
+        <a routerLink="/satilik-konut" class="btn-link">Detaylı Bilgi →</a>
+      </div>
+
+      <!-- Kiralık Konut -->
+      <div class="service-card">
+        <div class="service-icon">🔑</div>
+        <h3>Kiralık Konut</h3>
+        <p>Kişiye özel kiralık ev ve daire seçenekleri ile yeni evinizi bulun.</p>
+        <a routerLink="/kiralik-konut" class="btn-link">Detaylı Bilgi →</a>
+      </div>
+
+      <!-- Ticari Gayrimenkul -->
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Ticari Gayrimenkul</h3>
+        <p>İşletmeniz için uygun ofis, dükkan ve ticari alan seçeneklerini keşfedin.</p>
+        <a routerLink="/ticari-gayrimenkul" class="btn-link">Detaylı Bilgi →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Customer Satisfaction -->
+<section class="satisfaction">
+  <div class="container">
+    <div class="satisfaction-content">
+      <div class="satisfaction-number">%100</div>
+      <h3>Müşteri Memnuniyeti</h3>
+      <p>Emlak seçiminden satın almaya, kiralama sürecinden sonrasına kadar her adımda yanınızdayız.</p>
+      <a href="#iletisim" class="btn-secondary">Bize Ulaşın</a>
+    </div>
+  </div>
+</section>
+
+<!-- Property Gallery Section -->
+<section class="property-gallery">
+  <div class="container">
+    <h2>Öne Çıkan Emlaklar</h2>
+    <div class="gallery-grid">
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600" alt="Lüks Villa" class="property-image">
+        <div class="property-info">
+          <h3>Lüks Villa</h3>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600" alt="Modern Daire" class="property-image">
+        <div class="property-info">
+          <h3>Modern Daire</h3>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="Ofis Alanı" class="property-image">
+        <div class="property-info">
+          <h3>Ofis Alanı</h3>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=600" alt="Bahçeli Ev" class="property-image">
+        <div class="property-info">
+          <h3>Bahçeli Ev</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Müşteri Yorumları</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">❜❜</div>
+        <p class="testimonial-text">"Satılık, kiralık konut ve tüm emlak işleriniz için güvenilir ve tecrübeli bir yer
+          arıyorsanız tavsiye ederim👍"</p>
+        <div class="testimonial-author">
+          <strong>Eda ÇELİK</strong>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">❜❜</div>
+        <p class="testimonial-text">"Tecrübesi ve müşteri ilişkisi açısından kesinlikle tavsiye ederim. Yıllardır Ömer
+          beyle çalışıyorum çok memnunum."</p>
+        <div class="testimonial-author">
+          <strong>Mazhar ER</strong>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">❜❜</div>
+        <p class="testimonial-text">"1987 yılından bu yana tanıdığımız güvenilir 1. adres ister yaşam alanlarımızda
+          ister ticaret yaparken her daim yanımızda olan samimi candan ve güvenilir tek adres olan Zvline Real Estate'ye
+          sonsuz teşekkürler."</p>
+        <div class="testimonial-author">
+          <strong>Mert ANIL</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Insurance Companies -->
+<!-- <section class="partners">
+  <div class="container">
+    <h2 class="section-title">İş Ortaklarımız</h2>
+    <div class="partners-grid">
+      <div class="partner-logo">Gayrimenkul Yatırım Ortaklığı</div>
+      <div class="partner-logo">Emlak Konut GYO</div>
+      <div class="partner-logo">İş GYO</div>
+      <div class="partner-logo">Torunlar GYO</div>
+      <div class="partner-logo">Vakıf GYO</div>
+    </div>
+  </div>
+</section> -->
