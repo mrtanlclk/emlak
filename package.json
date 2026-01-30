@@ -1,12 +1,13 @@
 {
-  "name": "sigorta",
+  "name": "emlak",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --base-href=/emlak/ && npx angular-cli-ghpages --dir=dist/emlak"
   },
   "prettier": {
     "printWidth": 100,

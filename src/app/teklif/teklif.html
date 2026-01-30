@@ -95,7 +95,7 @@
             class="form-control"
             [class.is-invalid]="submitted && f['emlakTipi'].errors">
             <option value="">Seçiniz...</option>
-            @for (tip of sigortaTipleri; track tip.value) {
+            @for (tip of emlakTipleri; track tip.value) {
               <option [value]="tip.value">{{ tip.label }}</option>
             }
           </select>

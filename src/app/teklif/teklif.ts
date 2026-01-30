@@ -15,7 +15,7 @@ export class TeklifComponent {
   submitted = false;
   successMessage = false;
 
-  sigortaTipleri = [
+  emlakTipleri = [
     { value: 'satilik', label: 'Satılık Konut' },
     { value: 'kiralik', label: 'Kiralık Konut' },
     { value: 'ticari', label: 'Ticari Gayrimenkul' },

@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "sigorta": {
+    "emlak": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -49,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "20kB"
                 }
               ],
               "outputHashing": "all"
@@ -67,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sigorta:build:production"
+              "buildTarget": "emlak:build:production"
             },
             "development": {
-              "buildTarget": "sigorta:build:development"
+              "buildTarget": "emlak:build:development"
             }
           },
           "defaultConfiguration": "development"
