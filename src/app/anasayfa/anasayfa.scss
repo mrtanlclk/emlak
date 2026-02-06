@@ -6,7 +6,7 @@
 
 // Main Title Section
 .main-title {
-  background: linear-gradient(135deg, #2d5016, #1a3d0f);
+  background: linear-gradient(135deg, #1a4d2e, #0f3621);
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -130,7 +130,7 @@
 
     .phone-link {
       background: white;
-      color: #2d5016;
+      color: #1a4d2e;
       padding: 1.2rem 3rem;
       border-radius: 50px;
       text-decoration: none;
@@ -236,13 +236,13 @@
 // Services Section
 .services {
   padding: 80px 0;
-  background: #d0d0d0;
+  background: #374151;
 
   .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2d5016;
+    color: #fff;
     font-weight: 700;
   }
 
@@ -253,7 +253,7 @@
   }
 
   .service-card {
-    background: #b0b0b0;
+    background: #4b5563;
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -271,27 +271,27 @@
     }
 
     h3 {
-      color: #2d5016;
+      color: #d1fae5;
       margin-bottom: 1rem;
       font-size: 1.4rem;
       font-weight: 700;
     }
 
     p {
-      color: #666;
+      color: #e5e7eb;
       margin-bottom: 1.5rem;
       line-height: 1.7;
       font-weight: 500;
     }
 
     .btn-link {
-      color: #2d5016;
+      color: #10b981;
       text-decoration: none;
       font-weight: 700;
       transition: color 0.3s;
 
       &:hover {
-        color: #1a3d0f;
+        color: #34d399;
       }
     }
   }
@@ -300,7 +300,7 @@
 // Customer Satisfaction
 .satisfaction {
   padding: 60px 0;
-  background: linear-gradient(135deg, #2d5016, #1a3d0f);
+  background: linear-gradient(135deg, #1a4d2e, #0f3621);
   color: #fff;
   text-align: center;
 
@@ -322,8 +322,8 @@
   }
 
   .btn-secondary {
-    background: #a0a0a0;
-    color: #2d5016;
+    background: #e5e7eb;
+    color: #1a4d2e;
     padding: 0.8rem 2rem;
     border-radius: 25px;
     text-decoration: none;
@@ -340,13 +340,13 @@
 // Testimonials
 .testimonials {
   padding: 80px 0;
-  background: #d8d8d8;
+  background: #2d3748;
 
   .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2d5016;
+    color: #e5e7eb;
     font-weight: 700;
   }
 
@@ -357,15 +357,15 @@
   }
 
   .testimonial-card {
-    background: #b8b8b8;
+    background: #4b5563;
     padding: 2rem;
     border-radius: 15px;
-    border-left: 4px solid #2d5016;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #10b981;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
     .testimonial-text {
       font-style: italic;
-      color: #555;
+      color: #e5e7eb;
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       line-height: 1.7;
@@ -373,12 +373,12 @@
     }
 
     .testimonial-author {
-      color: #2d5016;
+      color: #10b981;
       font-weight: 700;
     }
 
     .testimonial-header {
-      color: #2d5016;
+      color: #10b981;
       font-size: 3rem;
       display: flex;
       justify-content: center;
@@ -390,13 +390,13 @@
 // Partners
 .partners {
   padding: 60px 0;
-  background: #d0d0d0;
+  background: #374151;
 
   .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2d5016;
+    color: #e5e7eb;
     font-weight: 700;
   }
 
@@ -513,6 +513,81 @@
     .footer-grid {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+  }
+}
+
+// Fixed Contact Buttons
+.floating-contact-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+
+  .contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .whatsapp-btn {
+    background: #25D366;
+
+    &:hover {
+      background: #20BA5B;
+    }
+  }
+
+  .call-btn {
+    background: linear-gradient(135deg, #1a4d2e, #0f3621);
+
+    &:hover {
+      background: linear-gradient(135deg, #0f3621, #062311);
+    }
+  }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  .floating-contact-buttons {
+    bottom: 20px;
+    right: 20px;
+
+    .contact-btn {
+      width: 56px;
+      height: 56px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
     }
   }
 }

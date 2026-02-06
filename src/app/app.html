@@ -8,14 +8,14 @@
         <p class="tagline">Ev, Arazi Satış ve Kiralama</p>
       </div>
     </a>
-    
+
     <!-- Hamburger Menu Button -->
     <button class="hamburger" [class.active]="menuOpen()" (click)="toggleMenu()" aria-label="Menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
-    
+
     <ul class="navbar-menu" [class.mobile-active]="menuOpen()">
       <li><a routerLink="/" fragment="anasayfa" (click)="closeMenu()">Anasayfa</a></li>
       <li><a routerLink="/hakkimizda" (click)="closeMenu()">Hakkımızda</a></li>
@@ -30,7 +30,7 @@
         </ul>
       </li>
       <li><a routerLink="/iletisim" (click)="closeMenu()">İletişim</a></li>
-      <li><a routerLink="/teklif" class="btn-primary" (click)="closeMenu()">Teklif Al</a></li>
+      <!-- <li><a routerLink="/teklif" class="btn-primary" (click)="closeMenu()">Teklif Al</a></li> -->
     </ul>
   </div>
 </nav>
@@ -40,7 +40,7 @@
 <!-- Footer -->
 <footer class="footer" id="iletisim">
   <div class="container">
-    
+
     <!-- Footer Header -->
     <div class="footer-header">
       <div class="footer-logo"></div>
@@ -49,6 +49,9 @@
         <p>Ev, Arazi Satış ve Kiralama</p>
       </div>
     </div>
+
+
+     <div>Van Grup kuruluşudur.</div><br><br>
 
     <div class="footer-grid">
 
@@ -59,7 +62,9 @@
           <p><strong>Telefon:</strong></p>
           <p><a href="tel:+905337230153">+90 533 723 01 53</a></p>
           <p><strong>Email:</strong></p>
-          <p><a href="mailto:info@zvline.com">info@zvline.com</a></p>
+          <p><a href="mailto:info@zvline.com.tr">info@zvline.com.tr</a></p>
+         
+
         </div>
       </div>
 
@@ -67,8 +72,7 @@
       <div class="footer-col">
         <h3>Adres</h3>
         <p>Fatih Mahallesi İzzetli Sokağı Sonu Vanlıoğlu <br> Apt No 1 Tuzla İstanbul</p>
-        <a href="https://maps.app.goo.gl/VQZtFtBAb6XGEMuL6"
-          target="_blank" class="btn-link">Yol tarifi al →</a>
+        <a href="https://maps.app.goo.gl/VQZtFtBAb6XGEMuL6" target="_blank" class="btn-link">Yol tarifi al →</a>
       </div>
 
       <!-- Social Media -->

@@ -23,17 +23,17 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
     {
       title: 'Hayalinizdeki ev sizleri bekliyor',
       subtitle: 'Satılık ve Kiralık Emlak Danışmanlığı',
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070'
+      image: 'assets/img/dubai-1.jpg'
     },
     {
       title: 'Güvenilir Emlak Danışmanlığı',
       subtitle: 'Yatırımınızı güvenceye alın',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070'
+      image: 'assets/img/dubai-2.jpg'
     },
     {
       title: 'Ticari ve Konut Projeleri',
       subtitle: 'Profesyonel emlak hizmetleri',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070'
+      image: 'assets/img/dubai-3.jpg'
     }
   ];
 
