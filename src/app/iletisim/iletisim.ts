@@ -20,10 +20,10 @@ export class IletisimComponent {
   private setPageMeta() {
     this.metaService.setMetaTags({
       title: 'İletişim - ZV Line Real Estate',
-      description: 'ZV Line Real Estate ile iletişime geçin. Dubai emlak danışmanlığı için sorularınızı sorun veya randevu alın.',
+      description: 'ZV Line Real Estate ile iletişime geçin. Emlak danışmanlığı için sorularınızı sorun veya randevu alın.',
       keywords: 'iletişim, ZV Line Real Estate, emlak danışmanlığı, destek, randevu',
       ogTitle: 'İletişim - ZV Line Real Estate',
-      ogDescription: 'Bizimle iletişime geçin ve Dubai emlak projeleri hakkında bilgi alın',
+      ogDescription: 'Bizimle iletişime geçin ve emlak projeleri hakkında bilgi alın',
       url: this.metaService.getBaseUrl() + '/iletisim'
     });
 
@@ -31,14 +31,14 @@ export class IletisimComponent {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       'name': 'ZV Line Real Estate',
-      'description': 'Dubai\'de emlak satış ve kiralama hizmetleri',
+      'description': 'Emlak satış ve kiralama hizmetleri',
       'url': this.metaService.getBaseUrl() + '/iletisim',
       'telephone': '+971XXXXXXXXX',
       'email': 'info@zvline.com.tr',
       'address': {
         '@type': 'PostalAddress',
-        'addressLocality': 'Dubai',
-        'addressCountry': 'UAE'
+        'addressLocality': 'Türkiye',
+        'addressCountry': 'Turkey'
       }
     });
   }

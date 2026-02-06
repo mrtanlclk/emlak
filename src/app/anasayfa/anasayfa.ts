@@ -47,11 +47,11 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
 
   private setPageMeta() {
     this.metaService.setMetaTags({
-      title: 'ZV Line Real Estate - Dubai Emlak Satış ve Kiralama',
-      description: 'ZV Line Real Estate ile Dubai\'de lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri. Profesyonel danışmanlarımız size yardımcı olacaktır.',
-      keywords: 'Dubai emlak, gayrimenkul satışı, konut kiralama, yatırım, emlak danışmanlığı',
-      ogTitle: 'ZV Line Real Estate - Dubai Emlak Satış ve Kiralama',
-      ogDescription: 'Dubai\'de lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri',
+      title: 'ZV Line Real Estate - Emlak Satış ve Kiralama',
+      description: 'ZV Line Real Estate ile lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri. Profesyonel danışmanlarımız size yardımcı olacaktır.',
+      keywords: 'emlak, gayrimenkul satışı, konut kiralama, yatırım, emlak danışmanlığı',
+      ogTitle: 'ZV Line Real Estate - Emlak Satış ve Kiralama',
+      ogDescription: 'Lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri',
       url: this.metaService.getBaseUrl()
     });
 
@@ -63,7 +63,7 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
       'alternateName': 'ZV Line',
       'url': this.metaService.getBaseUrl(),
       'logo': this.metaService.getBaseUrl() + '/assets/img/colored-logo.svg',
-      'description': 'Dubai\'de emlak satış ve kiralama hizmetleri sunmaktadır',
+      'description': 'Emlak satış ve kiralama hizmetleri sunmaktadır',
       'contactPoint': {
         '@type': 'ContactPoint',
         'contactType': 'Customer Service',

@@ -18,10 +18,10 @@ export class HakkimizdaComponent {
   private setPageMeta() {
     this.metaService.setMetaTags({
       title: 'Hakkımızda - ZV Line Real Estate',
-      description: 'ZV Line Real Estate hakkında bilgi edinin. Dubai emlak sektöründe yılların deneyimi ile müşterilerine en iyi hizmetleri sunmaktadır.',
-      keywords: 'ZV Line Real Estate hakkında, emlak danışmanlığı, Dubai gayrimenkul, profesyonel takım',
+      description: 'ZV Line Real Estate hakkında bilgi edinin. Emlak sektöründe yılların deneyimi ile müşterilerine en iyi hizmetleri sunmaktadır.',
+      keywords: 'ZV Line Real Estate hakkında, emlak danışmanlığı, gayrimenkul, profesyonel takım',
       ogTitle: 'Hakkımızda - ZV Line Real Estate',
-      ogDescription: 'Dubai emlak sektöründe lider bir şirket olarak hizmet vermektedir',
+      ogDescription: 'Emlak sektöründe lider bir şirket olarak hizmet vermektedir',
       url: this.metaService.getBaseUrl() + '/hakkimizda'
     });
 

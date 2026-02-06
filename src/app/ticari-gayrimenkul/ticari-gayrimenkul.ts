@@ -19,11 +19,11 @@ export class TicariGayrimenkulComponent {
 
   private setPageMeta() {
     this.metaService.setMetaTags({
-      title: 'Ticari Gayrimenkul - Dubai Yatırım Fırsatları | ZV Line Real Estate',
-      description: 'Dubai\'de ticari gayrimenkul yatırım fırsatları. Ofis, magaza, atölye ve yatırım projeleri hakkında bilgi alın.',
-      keywords: 'ticari gayrimenkul Dubai, ofis, magaza, atölye, yatırım, ticari alanlar',
-      ogTitle: 'Ticari Gayrimenkul - Dubai Yatırım Fırsatları',
-      ogDescription: 'Dubai\'de ticari gayrimenkul ve yatırım projeleri',
+      title: 'Ticari Gayrimenkul - Yatırım Fırsatları | ZV Line Real Estate',
+      description: 'Ticari gayrimenkul yatırım fırsatları. Ofis, magaza, atölye ve yatırım projeleri hakkında bilgi alın.',
+      keywords: 'ticari gayrimenkul, ofis, magaza, atölye, yatırım, ticari alanlar',
+      ogTitle: 'Ticari Gayrimenkul - Yatırım Fırsatları',
+      ogDescription: 'Ticari gayrimenkul ve yatırım projeleri',
       url: this.metaService.getBaseUrl() + '/ticari-gayrimenkul'
     });
 
@@ -31,12 +31,12 @@ export class TicariGayrimenkulComponent {
       '@context': 'https://schema.org',
       '@type': 'Service',
       'name': 'Ticari Gayrimenkul',
-      'description': 'Dubai\'de ticari gayrimenkul danışmanlığı ve yatırım fırsatları',
+      'description': 'Ticari gayrimenkul danışmanlığı ve yatırım fırsatları',
       'provider': {
         '@type': 'Organization',
         'name': 'ZV Line Real Estate'
       },
-      'areaServed': 'Dubai'
+      'areaServed': 'Türkiye'
     });
   }
 }

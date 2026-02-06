@@ -123,7 +123,7 @@ Tüm sayfaların adresi ve güncelleme sıklığını arama motorlarına sağlar
 Her sayfa bileşeni aşağıdaki SEO bilgilerini içerir:
 
 ### Anasayfa
-- Title: "ZV Line Real Estate - Dubai Emlak Satış ve Kiralama"
+- Title: "ZV Line Real Estate - Emlak Satış ve Kiralama"
 - Açıklama: Lüksüs konut ve gayrimenkul hizmetleri
 - Structured Data: Organization schema
 
@@ -133,17 +133,17 @@ Her sayfa bileşeni aşağıdaki SEO bilgilerini içerir:
 - Structured Data: LocalBusiness schema
 
 ### Satılık Konut
-- Title: "Satılık Konut - Dubai Emlak | ZV Line Real Estate"
+- Title: "Satılık Konut - Emlak | ZV Line Real Estate"
 - Açıklama: Satılık konut seçenekleri
 - Structured Data: Service schema
 
 ### Kiralık Konut
-- Title: "Kiralık Konut - Dubai Emlak | ZV Line Real Estate"
+- Title: "Kiralık Konut - Emlak | ZV Line Real Estate"
 - Açıklama: Kiralık konut seçenekleri
 - Structured Data: Service schema
 
 ### Ticari Gayrimenkul
-- Title: "Ticari Gayrimenkul - Dubai Yatırım Fırsatları | ZV Line Real Estate"
+- Title: "Ticari Gayrimenkul - Yatırım Fırsatları | ZV Line Real Estate"
 - Açıklama: Ticari gayrimenkul fırsatları
 - Structured Data: Service schema
 
@@ -155,13 +155,13 @@ Her sayfa bileşeni aşağıdaki SEO bilgilerini içerir:
 ## 7. Anahtar Kelimeler Stratejisi
 
 ### Birincil Anahtar Kelimeler
-- Dubai emlak
+- Emlak
 - Gayrimenkul satışı
 - Konut kiralama
 - Yatırım
 
 ### İkincil Anahtar Kelimeler
-- Lüksüs daire Dubai
+- Lüksüs daire
 - Villa satışı
 - Ofis kiralama
 - Ticari alanlar
@@ -201,7 +201,7 @@ Her sayfa bileşeni aşağıdaki SEO bilgilerini içerir:
 
 ### Orta Vadeli
 1. Local SEO (Google My Business)
-2. Şehir sayfaları (Dubai, Abu Dhabi, vb.)
+2. Şehir sayfaları (İstanbul, Ankara, Izmir, vb.)
 3. Blog bölümü ekle
 4. Müşteri yorumları ekle
 

@@ -19,11 +19,11 @@ export class KiralikKonutComponent {
 
   private setPageMeta() {
     this.metaService.setMetaTags({
-      title: 'Kiralık Konut - Dubai Emlak | ZV Line Real Estate',
-      description: 'Dubai\'de kiralık konut fırsatlarını bulun. Studentler, profesyoneller ve aileler için uygun daireler ve evler.',
-      keywords: 'kiralık konut Dubai, daire kiralama, ev kiralama, apartman kiralama',
-      ogTitle: 'Kiralık Konut - Dubai Emlak',
-      ogDescription: 'Dubai\'de kiralık konutlar ve daireler',
+      title: 'Kiralık Konut - Emlak | ZV Line Real Estate',
+      description: 'Kiralık konut fırsatlarını bulun. Studentler, profesyoneller ve aileler için uygun daireler ve evler.',
+      keywords: 'kiralık konut, daire kiralama, ev kiralama, apartman kiralama',
+      ogTitle: 'Kiralık Konut - Emlak',
+      ogDescription: 'Kiralık konutlar ve daireler',
       url: this.metaService.getBaseUrl() + '/kiralik-konut'
     });
 
@@ -31,12 +31,12 @@ export class KiralikKonutComponent {
       '@context': 'https://schema.org',
       '@type': 'Service',
       'name': 'Kiralık Konut',
-      'description': 'Dubai\'de kiralık konut danışmanlığı hizmetleri',
+      'description': 'Kiralık konut danışmanlığı hizmetleri',
       'provider': {
         '@type': 'Organization',
         'name': 'ZV Line Real Estate'
       },
-      'areaServed': 'Dubai'
+      'areaServed': 'Türkiye'
     });
   }
 }
