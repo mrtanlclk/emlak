@@ -2,6 +2,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, ViewChild, ElementRef,
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { register } from 'swiper/element/bundle';
+import { MetaService } from '../services/meta.service';
 
 register();
 
@@ -37,7 +38,44 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
     }
   ];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private metaService: MetaService
+  ) {
+    this.setPageMeta();
+  }
+
+  private setPageMeta() {
+    this.metaService.setMetaTags({
+      title: 'ZV Line Real Estate - Dubai Emlak Satış ve Kiralama',
+      description: 'ZV Line Real Estate ile Dubai\'de lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri. Profesyonel danışmanlarımız size yardımcı olacaktır.',
+      keywords: 'Dubai emlak, gayrimenkul satışı, konut kiralama, yatırım, emlak danışmanlığı',
+      ogTitle: 'ZV Line Real Estate - Dubai Emlak Satış ve Kiralama',
+      ogDescription: 'Dubai\'de lüksüs konut, ticari gayrimenkul ve emlak kiralama hizmetleri',
+      url: this.metaService.getBaseUrl()
+    });
+
+    // Set structured data for Organization
+    this.metaService.setStructuredData({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'ZV Line Real Estate',
+      'alternateName': 'ZV Line',
+      'url': this.metaService.getBaseUrl(),
+      'logo': this.metaService.getBaseUrl() + '/assets/img/colored-logo.svg',
+      'description': 'Dubai\'de emlak satış ve kiralama hizmetleri sunmaktadır',
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'contactType': 'Customer Service',
+        'availableLanguage': ['tr', 'en']
+      },
+      'sameAs': [
+        'https://www.facebook.com/zvline',
+        'https://www.instagram.com/zvline',
+        'https://www.linkedin.com/company/zvline'
+      ]
+    });
+  }
 
   ngAfterViewInit() {
     this.updateSwiper();
