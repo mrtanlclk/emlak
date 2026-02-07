@@ -510,8 +510,28 @@ body {
   }
 }
 
+// Mobile Brand Info
+.mobile-brand-info {
+  display: none;
+}
+
+
+
 // Responsive Design
 @media (max-width: 768px) {
+  .mobile-brand-info {
+    display: block;
+    text-align: center;
+    background: #2d3748;
+    padding: 1rem 0;
+    border-bottom: 1px solid #4b5563;
+
+    small {
+      color: #d1d5db;
+      font-size: 0.95rem;
+    }
+  }
+
   .navbar {
     .hamburger {
       display: flex;

@@ -37,6 +37,10 @@
     opacity: 0.95;
     letter-spacing: 1px;
   }
+
+  .desktop-brand-info {
+    display: block;
+  }
 }
 
 // Hero Section with Swiper
@@ -453,6 +457,10 @@
 
     .company-subtitle {
       display: none; // Mobile'da subtitle'ı gizle
+    }
+
+    .desktop-brand-info {
+      display: none;
     }
   }
 
