@@ -28,7 +28,7 @@ export class App implements OnInit {
   ) {
     this.currentLanguage = this.translationService.getLanguageSignal();
   }
-
+  
   ngOnInit() {
     // Handle fragment scrolling on route changes
     this.router.events.pipe(
