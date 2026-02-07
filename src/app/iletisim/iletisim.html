@@ -1,9 +1,9 @@
 <div class="iletisim-page">
   <div class="iletisim-header">
     <div class="container">
-      <a routerLink="/" class="back-link">← Ana Sayfaya Dön</a>
-      <h1>İletişim</h1>
-      <p class="subtitle">Size nasıl yardımcı olabiliriz? Bize ulaşın!</p>
+      <a routerLink="/" class="back-link">← {{ translate('ananutSayfa') }}</a>
+      <h1>{{ translate('iletisimTitle') }}</h1>
+      <p class="subtitle">{{ translate('iletisimSubtitle') }}</p>
     </div>
   </div>
 
@@ -12,29 +12,29 @@
       
       <!-- İletişim Bilgileri -->
       <div class="contact-info-section">
-        <h2>İletişim Bilgileri</h2>
+        <h2>{{ translate('iletisimInfoTitle') }}</h2>
         <div class="contact-cards">
           
           <div class="contact-card">
             <div class="contasct-icon">📞</div>
-            <h3>Telefon</h3>
+            <h3>{{ translate('iletisimPhoneTitle') }}</h3>
             <p><a href="tel:+905337230153">+90 533 723 01 53</a></p>
-            <p class="contact-desc">Haftanın 7 günü, 09:00 - 18:00 arası</p>
+            <p class="contact-desc">{{ translate('iletisimPhoneDesc') }}</p>
           </div>
 
           <div class="contact-card">
             <div class="contact-icon">✉️</div>
-            <h3>E-posta</h3>
+            <h3>{{ translate('iletisimEmailTitle') }}</h3>
             <p><a href="mailto:info@zvline.com.tr">info@zvline.com.tr</a></p>
-            <p class="contact-desc">24 saat içinde yanıt veriyoruz</p>
+            <p class="contact-desc">{{ translate('iletisimEmailDesc') }}</p>
           </div>
 
           <div class="contact-card">
             <div class="contact-icon">📍</div>
-            <h3>Adres</h3>
+            <h3>{{ translate('iletisimAddressTitle') }}</h3>
             <p>Fatih Mah. İzzetli Sk.<br>Vanlıoğlu Apt. No 1<br>Tuzla İstanbul</p>
             <a href="https://maps.app.goo.gl/VQZtFtBAb6XGEMuL6" target="_blank" class="map-link">
-              Haritada Görüntüle →
+              {{ translate('iletisimMapLink') }}
             </a>
           </div>
 
@@ -89,15 +89,15 @@
 
       <!-- Harita Bölümü -->
       <div class="map-section">
-        <h2>Ofisimizi Ziyaret Edin</h2>
+        <h2>{{ translate('iletisimVisitTitle') }}</h2>
         <div class="map-container">
           <iframe width="800" height="450" style="border:0;" src="https://maps.google.com/maps?q=Fatih%20Mahallesi%20%C4%B0zzetli%20Soka%C4%9F%C4%B1%20Sonu%20Vanl%C4%B1o%C4%9Flu%20Apt%20No%201%20Tuzla%20%C4%B0stanbul&t=m&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map-info">
-          <p><strong>Ulaşım:</strong></p>
+          <p><strong>{{ translate('iletisimTransportTitle') }}:</strong></p>
           <ul>
-            <li>Marmaray ile Tuzla durağında inip otobüs veya minibüslerle ulaşım sağlanabilir</li>
-            <li>Beyazevler – Okan Ünv. yönü durağına 5 dakika yürüme mesafesindedir</li>
+            <li>{{ translate('iletisimTransportItem1') }}</li>
+            <li>{{ translate('iletisimTransportItem2') }}</li>
           </ul>
         </div>
       </div>

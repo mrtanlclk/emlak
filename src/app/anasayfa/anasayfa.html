@@ -2,9 +2,9 @@
 <section class="main-title">
   <div class="container">
     <div class="title-logo"></div>
-    <h1 class="company-title">ZV Line REAL ESTATE</h1>
-    <p class="company-subtitle">Ev, Arazi Satış ve Kiralama</p>
-    <p class="desktop-brand-info"><small>Vanlıoğlu Grup kuruluşudur.</small></p>
+    <h1 class="company-title">{{ translate('company') }}</h1>
+    <p class="company-subtitle">{{ translate('tagline') }}</p>
+    <p class="desktop-brand-info"><small>{{ translate('vanlioğluGrup') }}</small></p>
   </div>
 </section>
 
@@ -24,7 +24,7 @@
           <h1>{{ slide.title }}</h1>
           <p class="hero-subtitle">{{ slide.subtitle }}</p>
           <div class="hero-contact">
-            <a href="tel:+905337230153" class="phone-link">Bizi Arayın</a>
+            <a href="tel:+905337230153" class="phone-link">{{ translate('bejizArayın') }}</a>
             <!-- <button type="button" class="btn-primary" (click)="goToTeklif()">Teklif Al</button> -->
           </div>
         </div>
@@ -38,31 +38,31 @@
 <!-- Services Section -->
 <section class="services" id="hizmetler">
   <div class="container">
-    <h2 class="section-title">Emlak Hizmetlerimiz</h2>
+    <h2 class="section-title">{{ translate('emlakHizmetleri') }}</h2>
     <div class="services-grid">
 
       <!-- Satılık Konut -->
       <div class="service-card">
         <div class="service-icon">🏠</div>
-        <h3>Satılık Konut</h3>
-        <p>Hayalinizdeki eve kavuşmak için geniş satılık konut portföyümüzü inceleyin.</p>
-        <a routerLink="/satilik-konut" class="btn-link">Detaylı Bilgi →</a>
+        <h3>{{ translate('satilikKonut') }}</h3>
+        <p>{{ translate('satiliklKonutDesc') }}</p>
+        <a routerLink="/satilik-konut" class="btn-link">{{ translate('detayliBilgi') }}</a>
       </div>
 
       <!-- Kiralık Konut -->
       <div class="service-card">
         <div class="service-icon">🔑</div>
-        <h3>Kiralık Konut</h3>
-        <p>Kişiye özel kiralık ev ve daire seçenekleri ile yeni evinizi bulun.</p>
-        <a routerLink="/kiralik-konut" class="btn-link">Detaylı Bilgi →</a>
+        <h3>{{ translate('kiralikKonut') }}</h3>
+        <p>{{ translate('kiralikKonutDesc') }}</p>
+        <a routerLink="/kiralik-konut" class="btn-link">{{ translate('detayliBilgi') }}</a>
       </div>
 
       <!-- Ticari Gayrimenkul -->
       <div class="service-card">
         <div class="service-icon">🏢</div>
-        <h3>Ticari Gayrimenkul</h3>
-        <p>İşletmeniz için uygun ofis, dükkan ve ticari alan seçeneklerini keşfedin.</p>
-        <a routerLink="/ticari-gayrimenkul" class="btn-link">Detaylı Bilgi →</a>
+        <h3>{{ translate('ticariGayrimenkul') }}</h3>
+        <p>{{ translate('ticariGayrimenkuleDesc') }}</p>
+        <a routerLink="/ticari-gayrimenkul" class="btn-link">{{ translate('detayliBilgi') }}</a>
       </div>
 
     </div>
@@ -74,9 +74,9 @@
   <div class="container">
     <div class="satisfaction-content">
       <div class="satisfaction-number">%100</div>
-      <h3>Müşteri Memnuniyeti</h3>
-      <p>Emlak seçiminden satın almaya, kiralama sürecinden sonrasına kadar her adımda yanınızdayız.</p>
-      <a routerLink="/iletisim" class="btn-secondary">Bize Ulaşın</a>
+      <h3>{{ translate('musteriMemnuniyeti') }}</h3>
+      <p>{{ translate('musteriMemnuniyetiDesc') }}</p>
+      <a routerLink="/iletisim" class="btn-secondary">{{ translate('bizeUlasin') }}</a>
     </div>
   </div>
 </section>
@@ -84,34 +84,34 @@
 <!-- Property Gallery Section -->
 <section class="property-gallery">
   <div class="container">
-    <h2>Öne Çıkan Emlaklar</h2>
+    <h2>{{ translate('oneÇikanEmaklar') }}</h2>
     <div class="gallery-grid">
       <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600" alt="Lüks Villa"
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600" alt="{{ translate('luxusVilla') }}"
           class="property-image">
         <div class="property-info">
-          <h3>Lüks Villa</h3>
+          <h3>{{ translate('luxusVilla') }}</h3>
         </div>
       </div>
       <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600" alt="Modern Daire"
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600" alt="{{ translate('modernDaire') }}"
           class="property-image">
         <div class="property-info">
-          <h3>Modern Daire</h3>
+          <h3>{{ translate('modernDaire') }}</h3>
         </div>
       </div>
       <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="Ofis Alanı"
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="{{ translate('ofisAlani') }}"
           class="property-image">
         <div class="property-info">
-          <h3>Ofis Alanı</h3>
+          <h3>{{ translate('ofisAlani') }}</h3>
         </div>
       </div>
       <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=600" alt="Bahçeli Ev"
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=600" alt="{{ translate('bahceligEv') }}"
           class="property-image">
         <div class="property-info">
-          <h3>Bahçeli Ev</h3>
+          <h3>{{ translate('bahceligEv') }}</h3>
         </div>
       </div>
     </div>
@@ -121,36 +121,18 @@
 <!-- Testimonials Section -->
 <section class="testimonials">
   <div class="container">
-    <h2 class="section-title">Müşteri Yorumları</h2>
+    <h2 class="section-title">{{ translate('musteriYorumlari') }}</h2>
     <div class="testimonials-grid">
 
+      @for (testimonial of testimonials; track testimonial.author) {
       <div class="testimonial-card">
         <div class="testimonial-header">❜❜</div>
-        <p class="testimonial-text">"Satılık, kiralık konut ve tüm emlak işleriniz için güvenilir ve tecrübeli bir yer
-          arıyorsanız tavsiye ederim👍"</p>
+        <p class="testimonial-text">{{ translate(testimonial.text) }}</p>
         <div class="testimonial-author">
-          <strong>Eda ÇELİK</strong>
+          <strong>{{ translate(testimonial.author) }}</strong>
         </div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">❜❜</div>
-        <p class="testimonial-text">"Tecrübesi ve müşteri ilişkisi açısından kesinlikle tavsiye ederim. Yıllardır Mustafa
-          Bey ile çalışıyorum çok memnunum."</p>
-        <div class="testimonial-author">
-          <strong>Mazhar ER</strong>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">❜❜</div>
-        <p class="testimonial-text">"1987 yılından bu yana tanıdığımız güvenilir 1. adres ister yaşam alanlarımızda
-          ister ticaret yaparken her daim yanımızda olan samimi candan ve güvenilir tek adres olan ZV Line Real Estate'ye
-          sonsuz teşekkürler."</p>
-        <div class="testimonial-author">
-          <strong>Mert ANIL</strong>
-        </div>
-      </div>
+      }
 
     </div>
   </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MetaService } from '../services/meta.service';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-hakkimizda',
@@ -11,8 +12,15 @@ import { MetaService } from '../services/meta.service';
   styleUrl: './hakkimizda.scss'
 })
 export class HakkimizdaComponent {
-  constructor(private metaService: MetaService) {
+  constructor(
+    private metaService: MetaService,
+    public translationService: TranslationService
+  ) {
     this.setPageMeta();
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 
   private setPageMeta() {

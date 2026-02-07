@@ -1,74 +1,74 @@
 <div class="service-page">
   <div class="service-header">
     <div class="container">
-      <a routerLink="/" class="back-link">← Ana Sayfaya Dön</a>
-      <h1>Ticari Gayrimenkul</h1>
-      <p class="subtitle">İşletmeniz için uygun ofis, dükkan ve ticari alan seçeneklerini keşfedin</p>
+      <a routerLink="/" class="back-link">← {{ translate('ananutSayfa') }}</a>
+      <h1>{{ translate('ticariTitle') }}</h1>
+      <p class="subtitle">{{ translate('ticariSubtitle') }}</p>
     </div>
   </div>
 
   <div class="container">
     <div class="service-content">
       <div class="content-section">
-        <h2>Ticari Gayrimenkul Hizmetlerimiz</h2>
-        <p>İş yeriniz için en uygun konumda, uygun fiyatla ticari gayrimenkul seçenekleri sunuyoruz. Ofis, mağaza, depo ve diğer ticari alanlar için profesyonel danışmanlık hizmeti.</p>
+        <h2>{{ translate('ticariServicesTitle') }}</h2>
+        <p>{{ translate('ticariServicesDesc') }}</p>
         
         <div class="features-grid">
           <div class="feature-card">
-            <h3>🏢 Ofis Alanları</h3>
-            <p>Modern ofis binalarında farklı metrekarelerde ofis seçenekleri</p>
+            <h3>{{ translate('ticariFeature1Title') }}</h3>
+            <p>{{ translate('ticariFeature1Desc') }}</p>
           </div>
           <div class="feature-card">
-            <h3>🛍️ Mağaza ve Dükkanlar</h3>
-            <p>Yoğun caddelerde, ticaret merkezi konumlarında mağaza alanları</p>
+            <h3>{{ translate('ticariFeature2Title') }}</h3>
+            <p>{{ translate('ticariFeature2Desc') }}</p>
           </div>
           <div class="feature-card">
-            <h3>🏭 Depo ve Fabrika</h3>
-            <p>Lojistik ve üretim faaliyetleri için uygun depo ve fabrika alanları</p>
+            <h3>{{ translate('ticariFeature3Title') }}</h3>
+            <p>{{ translate('ticariFeature3Desc') }}</p>
           </div>
           <div class="feature-card">
-            <h3>💼 Yatırım Danışmanlığı</h3>
-            <p>Ticari gayrimenkul yatırımları için profesyonel danışmanlık</p>
+            <h3>{{ translate('ticariFeature4Title') }}</h3>
+            <p>{{ translate('ticariFeature4Desc') }}</p>
           </div>
         </div>
       </div>
 
       <!-- Ticari Gayrimenkul Galerisi -->
       <div class="property-gallery">
-        <h2>Ticari Gayrimenkul Örnekleri</h2>
+        <h2>{{ translate('ticariGalleryTitle') }}</h2>
         <div class="gallery-grid">
           <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="Modern Ofis" class="property-image">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600" alt="{{ translate('ticariGallery1') }}" class="property-image">
             <div class="property-info">
-              <h3>A+ Ofis Binası</h3>
+              <h3>{{ translate('ticariGallery1') }}</h3>
             </div>
           </div>
           <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600" alt="Mağaza" class="property-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600" alt="{{ translate('ticariGallery2') }}" class="property-image">
             <div class="property-info">
-              <h3>Cadde Üzeri Mağaza</h3>
+              <h3>{{ translate('ticariGallery2') }}</h3>
             </div>
           </div>
           <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=600" alt="Depo" class="property-image">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=600" alt="{{ translate('ticariGallery3') }}" class="property-image">
             <div class="property-info">
-              <h3>Lojistik Depo</h3>
+              <h3>{{ translate('ticariGallery3') }}</h3>
             </div>
           </div>
           <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=600" alt="İş Merkezi" class="property-image">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=600" alt="{{ translate('ticariGallery4') }}" class="property-image">
             <div class="property-info">
-              <h3>İş Merkezi Ofisi</h3>
+              <h3>{{ translate('ticariGallery4') }}</h3>
             </div>
           </div>
         </div>
       </div>
 
       <div class="cta-section">
-        <h3>İşiniz için İdeal Ticari Alanı Bulalım</h3>
-        <p>İş yeriniz için en uygun ticari gayrimenkul seçenekleri</p>
+        <h3>{{ translate('ticariCtaTitle') }}</h3>
+        <p>{{ translate('ticariCtaSubtitle') }}</p>
         <div class="cta-buttons">
-          <a href="tel:+905337230153" class="btn-primary">📞 Hemen Ara</a>
+          <a href="tel:+905337230153" class="btn-primary">{{ translate('ticariCtaCall') }}</a>
           <!-- <a routerLink="/teklif" class="btn-secondary">Teklif Al</a> -->
         </div>
       </div>

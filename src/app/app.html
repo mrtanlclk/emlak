@@ -9,6 +9,23 @@
       </div>
     </a>
 
+    <div class="dropdown language-dropdown mobile-language-dropdown" [class.active]="languageDropdownOpen()">
+      <a href="#" (click)="toggleLanguageDropdown(); $event.preventDefault()" class="dropdown-toggle" aria-label="{{ translate('dilSecimi') }}">
+        <span class="language-flag" aria-hidden="true">{{ getCurrentLanguageFlag() }}</span>
+        <span class="dropdown-arrow">▼</span>
+      </a>
+      <ul class="dropdown-menu">
+        @for (lang of languages; track lang.code) {
+        <li>
+          <a href="#" (click)="setLanguage(lang.code); $event.preventDefault()" [class.active]="currentLanguage() === lang.code">
+            <span class="language-flag" aria-hidden="true">{{ lang.flag }}</span>
+            <span class="language-name">{{ lang.name }}</span>
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+
     <!-- Hamburger Menu Button -->
     <button class="hamburger" [class.active]="menuOpen()" (click)="toggleMenu()" aria-label="Menu">
       <span></span>
@@ -17,27 +34,43 @@
     </button>
 
     <ul class="navbar-menu" [class.mobile-active]="menuOpen()">
-      <li><a routerLink="/" fragment="anasayfa" (click)="closeMenu()">Anasayfa</a></li>
-      <li><a routerLink="/hakkimizda" (click)="closeMenu()">Hakkımızda</a></li>
+      <li><a routerLink="/" fragment="anasayfa" (click)="closeMenu()">{{ translate('anasayfa') }}</a></li>
+      <li><a routerLink="/hakkimizda" (click)="closeMenu()">{{ translate('hakkimizda') }}</a></li>
       <li class="dropdown" [class.active]="hizmetlerDropdownOpen()">
         <a href="#" (click)="toggleHizmetlerDropdown(); $event.preventDefault()" class="dropdown-toggle">
-          Hizmetler <span class="dropdown-arrow">▼</span>
+          {{ translate('hizmetler') }} <span class="dropdown-arrow">▼</span>
         </a>
         <ul class="dropdown-menu">
-          <li><a routerLink="/satilik-konut" (click)="closeMenu()">Satılık Konut</a></li>
-          <li><a routerLink="/kiralik-konut" (click)="closeMenu()">Kiralık Konut</a></li>
-          <li><a routerLink="/ticari-gayrimenkul" (click)="closeMenu()">Ticari Gayrimenkul</a></li>
+          <li><a routerLink="/satilik-konut" (click)="closeMenu()">{{ translate('satilikKonut') }}</a></li>
+          <li><a routerLink="/kiralik-konut" (click)="closeMenu()">{{ translate('kiralikKonut') }}</a></li>
+          <li><a routerLink="/ticari-gayrimenkul" (click)="closeMenu()">{{ translate('ticariGayrimenkul') }}</a></li>
         </ul>
       </li>
-      <li><a routerLink="/iletisim" (click)="closeMenu()">İletişim</a></li>
-      <!-- <li><a routerLink="/teklif" class="btn-primary" (click)="closeMenu()">Teklif Al</a></li> -->
+      <li><a routerLink="/iletisim" (click)="closeMenu()">{{ translate('iletisim') }}</a></li>
+      <li class="dropdown language-dropdown" [class.active]="languageDropdownOpen()">
+        <a href="#" (click)="toggleLanguageDropdown(); $event.preventDefault()" class="dropdown-toggle">
+          <span class="language-flag" aria-hidden="true">{{ getCurrentLanguageFlag() }}</span>
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <ul class="dropdown-menu">
+          @for (lang of languages; track lang.code) {
+          <li>
+            <a href="#" (click)="setLanguage(lang.code); $event.preventDefault()" [class.active]="currentLanguage() === lang.code">
+              <span class="language-flag" aria-hidden="true">{{ lang.flag }}</span>
+              <span class="language-name">{{ lang.name }}</span>
+            </a>
+          </li>
+          }
+        </ul>
+      </li>
+      <!-- <li><a routerLink="/teklif" class="btn-primary" (click)="closeMenu()">{{ translate('teklifAl') }}</a></li> -->
     </ul>
   </div>
 </nav>
 
 <!-- Mobile Only Brand Info -->
 <div class="mobile-brand-info">
-  <p><small>Vanlıoğlu Grup kuruluşudur.</small></p>
+  <p><small>{{ translate('vanlioğluGrup') }}</small></p>
 </div>
 
 <router-outlet />
@@ -50,9 +83,9 @@
     <div class="footer-header">
       <div class="footer-logo"></div>
       <div class="footer-brand">
-        <h2>ZV Line REAL ESTATE</h2>
-        <p>Ev, Arazi Satış ve Kiralama</p>
-        <p><small>Vanlıoğlu Grup kuruluşudur.</small></p>
+        <h2>{{ translate('company') }}</h2>
+        <p>{{ translate('tagline') }}</p>
+        <p><small>{{ translate('vanlioğluGrup') }}</small></p>
       </div>
     </div>
 
@@ -60,11 +93,11 @@
 
       <!-- Contact Info -->
       <div class="footer-col">
-        <h3>İletişim Bilgileri</h3>
+        <h3>{{ translate('iletişimBilgileri') }}</h3>
         <div class="contact-info">
-          <p><strong>Telefon:</strong></p>
+          <p><strong>{{ translate('telefon') }}:</strong></p>
           <p><a href="tel:+905337230153">+90 533 723 01 53</a></p>
-          <p><strong>Email:</strong></p>
+          <p><strong>{{ translate('email') }}:</strong></p>
           <p><a href="mailto:info@zvline.com.tr">info@zvline.com.tr</a></p>
          
 
@@ -73,24 +106,24 @@
 
       <!-- Address -->
       <div class="footer-col">
-        <h3>Adres</h3>
+        <h3>{{ translate('adres') }}</h3>
         <p>Fatih Mahallesi İzzetli Sokağı Sonu Vanlıoğlu <br> Apt No 1 Tuzla İstanbul</p>
-        <a href="https://maps.app.goo.gl/VQZtFtBAb6XGEMuL6" target="_blank" class="btn-link">Yol tarifi al →</a>
+        <a href="https://maps.app.goo.gl/VQZtFtBAb6XGEMuL6" target="_blank" class="btn-link">{{ translate('yolTarifiAl') }}</a>
       </div>
 
       <!-- Social Media -->
       <div class="footer-col">
-        <h3>Sosyal Medya</h3>
+        <h3>{{ translate('sosyalMedya') }}</h3>
         <div class="social-links">
-          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-          <a href="https://www.facebook.com" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com" target="_blank">{{ translate('linkedin') }}</a>
+          <a href="https://www.facebook.com" target="_blank">{{ translate('facebook') }}</a>
+          <a href="https://www.instagram.com" target="_blank">{{ translate('instagram') }}</a>
         </div>
       </div>
 
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 ZV Line Real Estate. Tüm Hakları Saklıdır.</p>
+      <p>{{ translate('telif') }}</p>
     </div>
   </div>
 </footer>

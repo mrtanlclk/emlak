@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MetaService } from '../services/meta.service';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-ticari-gayrimenkul',
@@ -13,8 +14,15 @@ import { MetaService } from '../services/meta.service';
 export class TicariGayrimenkulComponent {
   title = 'Ticari Gayrimenkul';
 
-  constructor(private metaService: MetaService) {
+  constructor(
+    private metaService: MetaService,
+    public translationService: TranslationService
+  ) {
     this.setPageMeta();
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 
   private setPageMeta() {

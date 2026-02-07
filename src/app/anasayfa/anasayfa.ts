@@ -1,8 +1,9 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, ViewChild, ElementRef, AfterViewInit, OnDestroy, OnInit, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { register } from 'swiper/element/bundle';
 import { MetaService } from '../services/meta.service';
+import { TranslationService } from '../services/translation.service';
 
 register();
 
@@ -14,11 +15,12 @@ register();
   templateUrl: './anasayfa.html',
   styleUrl: './anasayfa.scss'
 })
-export class AnasayfaComponent implements AfterViewInit, OnDestroy {
+export class AnasayfaComponent implements AfterViewInit, OnDestroy, OnInit {
   @ViewChild('heroSwiper')
   private heroSwiper?: ElementRef<HTMLElement & { swiper?: any }>;
 
   private resizeDebounce?: number;
+  private viewReady = false;
 
   slides = [
     {
@@ -38,11 +40,46 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
     }
   ];
 
+  testimonials = [
+    {
+      text: 'testimonial1Eda',
+      author: 'testimonial1EdaAuthor'
+    },
+    {
+      text: 'testimonial2Mazhar',
+      author: 'testimonial2MazharAuthor'
+    },
+    {
+      text: 'testimonial3Mert',
+      author: 'testimonial3MertAuthor'
+    }
+  ];
+
   constructor(
     private router: Router,
-    private metaService: MetaService
+    private metaService: MetaService,
+    public translationService: TranslationService
   ) {
     this.setPageMeta();
+    
+    // Track language changes and update slides accordingly
+    effect(() => {
+      this.translationService.getLanguage();
+      this.updateSlidesLanguage();
+      if (!this.viewReady) {
+        return;
+      }
+
+      // Reinitialize swiper after language change to refresh slide content
+      setTimeout(() => {
+        this.reinitializeSwiper();
+        this.updateSwiper();
+      }, 0);
+    });
+  }
+
+  ngOnInit() {
+    this.updateSlidesLanguage();
   }
 
   private setPageMeta() {
@@ -78,6 +115,7 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+    this.viewReady = true;
     this.updateSwiper();
   }
 
@@ -116,6 +154,11 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
+    const slides = swiperInstance.slides;
+    if (!slides || !slides.length) {
+      return;
+    }
+
     swiperInstance.update();
     swiperInstance.updateSlides?.();
     swiperInstance.updateSize?.();
@@ -136,5 +179,68 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy {
         }
       }, 100);
     }
+  }
+
+  private updateSlidesLanguage() {
+    const lang = this.translationService.getLanguage();
+    if (lang === 'tr') {
+      this.slides = [
+        {
+          title: 'Hayalinizdeki ev sizleri bekliyor',
+          subtitle: 'Satılık ve Kiralık Emlak Danışmanlığı',
+          image: 'assets/img/dubai-1.jpg'
+        },
+        {
+          title: 'Güvenilir Emlak Danışmanlığı',
+          subtitle: 'Yatırımınızı güvenceye alın',
+          image: 'assets/img/dubai-2.jpg'
+        },
+        {
+          title: 'Ticari ve Konut Projeleri',
+          subtitle: 'Profesyonel emlak hizmetleri',
+          image: 'assets/img/dubai-3.jpg'
+        }
+      ];
+    } else if (lang === 'en') {
+      this.slides = [
+        {
+          title: 'Your dream home is waiting for you',
+          subtitle: 'Property Sales and Rental Consulting',
+          image: 'assets/img/dubai-1.jpg'
+        },
+        {
+          title: 'Reliable Real Estate Consulting',
+          subtitle: 'Secure your investment',
+          image: 'assets/img/dubai-2.jpg'
+        },
+        {
+          title: 'Commercial and Residential Projects',
+          subtitle: 'Professional real estate services',
+          image: 'assets/img/dubai-3.jpg'
+        }
+      ];
+    } else if (lang === 'ar') {
+      this.slides = [
+        {
+          title: 'منزلك الذي تحلم به ينتظرك',
+          subtitle: 'استشارات بيع وتأجير العقارات',
+          image: 'assets/img/dubai-1.jpg'
+        },
+        {
+          title: 'استشارات عقارية موثوقة',
+          subtitle: 'أمن استثمارك',
+          image: 'assets/img/dubai-2.jpg'
+        },
+        {
+          title: 'مشاريع تجارية وسكنية',
+          subtitle: 'خدمات عقارية احترافية',
+          image: 'assets/img/dubai-3.jpg'
+        }
+      ];
+    }
+  }
+
+  translate(key: string): string {
+    return this.translationService.translate(key);
   }
 }
