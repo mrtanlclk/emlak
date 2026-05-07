@@ -42,16 +42,20 @@ export class AnasayfaComponent implements AfterViewInit, OnDestroy, OnInit {
 
   testimonials = [
     {
+      text: 'testimonial3Mert',
+      author: 'testimonial3MertAuthor'
+    },
+    {
+      text: 'testimonial4Rabia',
+      author: 'testimonial4RabiaAuthor'
+    },
+    {
       text: 'testimonial1Eda',
       author: 'testimonial1EdaAuthor'
     },
     {
       text: 'testimonial2Mazhar',
       author: 'testimonial2MazharAuthor'
-    },
-    {
-      text: 'testimonial3Mert',
-      author: 'testimonial3MertAuthor'
     }
   ];
 
